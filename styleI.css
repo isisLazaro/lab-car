@@ -1,0 +1,192 @@
+* {
+	margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    display: grid;
+    grid-template-rows: 3rem 12em repeat(3, 1fr) 16rem;
+    color:white;
+    font-family: "Raleway", sans-serif;
+    /* grid-template-columns: 100%; */
+    /* grid-template-rows: 4.06% 18.02% 19.78% 14.49% 27.73% 15.92%; */
+    /* grid-template-areas: 
+        "navigationbar"
+        "section-hero"
+        "section-informacion"
+        "section-conducir"
+        "section-tarifas"
+        "footer"; */
+}
+
+/* #nav-bar {
+    grid-area: navigationbar;
+} */
+/* HERO */
+#hero {
+    background-image: url(img/taxi.jpg);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 10% 80% 10%;
+}
+
+#hero aside {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background: #f7b617;
+    display: grid;
+    grid-template-columns: 9.05% 18.33% 20.14% 28.96% 22.62%;
+    grid-template-rows: repeat(6, 1fr) 
+}
+
+#hero aside h2 {
+    grid-column: 2/5;
+    grid-row: 2/4;
+}
+
+#hero aside img {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+#hero aside button {
+    grid-column: 2/4;
+    grid-row: 5/6;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* INFORMACIÓN */
+#informacion {
+    display: grid;
+    background-color: #f7b617;
+    padding: 2em 0.5em 0; /* top | horizontal | bottom */
+    font-weight: bold;
+}
+
+#informacion div {
+    border: 1px solid white;
+    padding: 7% 15%; /* vertical | horizontal */
+    display: grid;
+    justify-items: center;
+}
+
+#informacion div h3 {
+    padding: 0em 0em .5em;
+}
+
+#informacion div img {
+    width: 60%;
+}
+
+#informacion #p-mobile {
+    padding: 1.5em 0em 0.5em; /* top | horizontal | bottom */
+}
+
+/* CONDUCTOR */
+#conduce {
+    background: url(img/conduce.jpg), rgba(0,0,0,.5);
+    background-blend-mode: darken;
+    /* background-image: url(img/conduce.jpg); */
+    /* background-color: rgb(50,50,50); */
+    background-position:  bottom right; /*center/bottom*/
+    background-size: cover; /*contain*/
+    /* background-repeat: no-repeat; */
+    display: grid;
+    grid-template-columns: 7.35% 85.3% 7.35%;
+    grid-template-rows: 23.20% 30.86% 45.94%;
+}
+#conduce #aside-conduce {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display:grid;
+    grid-template-rows: auto;
+    grid-template-columns: 54.82% 45.18%;
+    /* background:rgba(0,0,0, 0.5); */
+}
+
+#conduce #aside-conduce h3 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+#conduce #aside-conduce p{
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+#conduce #aside-conduce button{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    border: none;
+    border-radius: 5px;
+    background-color: #f7b617;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+#tarifas {
+    background-color: #f7b617;
+}
+
+footer{
+    /* grid-area: footer; */
+    display: grid;
+    grid-template-columns: 2.6% 94.8% 2.6%;
+    grid-template-rows: 12.5% 77.5% 10%;
+    background-color: #2b2b2b;
+    color: white;
+}
+footer #logo-footer{
+    grid-column: 2/3;
+}
+
+footer section {
+    grid-column: 2/3;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    display: grid;
+    grid-template-columns: 53% 37.9% 9.1%;
+    /* grid-template-rows: 22% 16% 5.4% 16% 40.6%; */
+}
+
+section ul {
+    list-style: none;
+}
+
+section #ul1 {
+    grid-column: 1/2;
+}
+section #ul2 {
+    display: none;
+} 
+
+section #iconos-footer{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: 21.77% 15.86% 5.38% 16.40% 40.59%;
+}
+
+#iconos-footer #as-log{
+    grid-row: 2/3;
+    object-fit: cover;
+    width: 80%;
+}
+
+#iconos-footer #gp-logo{
+    grid-row: 4/5;
+    width: 80%;
+}
+
+footer p {
+    grid-column: 2/3;
+}
+
