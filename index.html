@@ -7,39 +7,56 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="styleI.css" />
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
     <title>lab&lt;ar</title>
 </head>
 <body>
-    <nav id = "nav-bar" class="navbar">
-        <img src="/img/logo.png" alt="">
-        <a href="#viaja">Viaja</a>
-        <a href="#conduce">Conduce</a>
-        <a href="#inica-sesion">Inicia Sesión</a>
-        <!-- <span class="icon-play3"></span> -->
+    <nav id = "nav-bar" class="nav">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class = "nav-toggle-label">&#9776;</label>
+        <img src="/img/logo.png" alt="logo LabCar" class="logo">
+        <menu class="menu">
+            <a href="#viaja">Viaja</a>
+            <a href="#conduce">Conduce</a>
+            <a href="#inicia-sesion">Inicia Sesión</a>
+        </menu>
     </nav>
-    <section id="hero">
-        <aside>
-            <!-- <h2>Disfruta del viaje</h2> -->
-            <!-- <h2>Eres dueño de tu tiempo</h2> -->
-            <!-- <p>Viaja con</p> -->
+    <section id="hero" class="hero">
+        <aside class="hero-mobile">
             <h2>Comienza a viajar con</h2>
-            <img src="/img/logo-blanco.png" alt="">
+            <img src="/img/logo-blanco.png" alt="logo LabCar">
             <button>Descarga el app</button>
-            <!-- <p>O BIEN</p> -->
-            <!-- <button>Conviértete en conductor</button> -->
+        </aside>
+        <aside class="hero-desktop">
+            <article class = "article">
+                <h2>Disfruta del viaje</h2>
+                <h2>Eres dueño de tu tiempo</h2>
+                <p>Viaja con</p> 
+                <img src="/img/logo-blanco.png" alt="logo LabCar">
+                <p>REGÍSTRATE</p>
+                <p>O BIEN</p>
+                <button>Conviértete en conductor</button>
+            </article>        
         </aside>
     </section>
-    <section id="informacion">
-        <div>
+    <section id="informacion" class="info">
+        <aside class="info-mobile">
             <h3>La nueva app</h3>
             <img src="/img/celular.png" alt="">
-        </div>
-        <!-- <h3>Descarga la nueva app</h3> -->
+        </aside>
         <p id = "p-mobile"> Llega a tu destino aún más rápido </p>
-        <!-- <p>La versión actualizada de LabCar está llena de nuevas funciones para 
-            llegar a donde quieras aún más fácil y rápido.</p>
-        <p>Con solo tocar un botón, un auto llega justo a tu ubicación. 
-            Súbete y no te preocupes: tu conductor sabe exactamente a dónde ir</p> -->
+        <aside class="info-desktop">
+            <h3>Descarga la nueva app</h3>
+            <p>La versión actualizada de LabCar está llena de nuevas funciones para 
+                llegar a donde quieras aún más fácil y rápido.</p>
+            <p>Con solo tocar un botón, un auto llega justo a tu ubicación. 
+                Súbete y no te preocupes: tu conductor sabe exactamente a dónde ir</p>
+        </aside>
     </section>
     <section id = "conduce">
         <aside id = "aside-conduce">
@@ -52,13 +69,13 @@
         <h3>Tarifas</h3>
         <p>Consulta las tarifas LabCar aquí</p>
         <form action="">
-            <label for="partida">icono1</label>
+            <label for="partida" id = "labP">icono1</label>
             <input type="text" id = "partida">
-            <label for="destino">icono2</label>
+            <label for="destino" id = "labD">icono2</label>
             <input type="text" id = "destino">
-            <input type="submit" value="¡trazar ruta!" id = "trazar-ruta">
+            <input type="submit" value="¡TRAZAR RUTA!" id = "trazar-ruta">
         </form>
-        <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-96.74001038074495%2C17.05245613824001%2C-96.73402369022371%2C17.05552813263733&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=18/17.05399/-96.73702">Ver mapa más grande</a></small>
+        <div id="map-container"></div>
     </section>
     <footer>
         <figure id="logo-footer"><img src="/img/logo-blanco.png" alt="" id = "img-logo-foot"></figure>
@@ -90,5 +107,6 @@
         </section>
         <p>© 2017 LabCar technologies Inc.</p>
     </footer>
+    <script src="mapping.js"></script>
 </body>
 </html>
