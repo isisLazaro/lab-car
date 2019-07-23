@@ -449,10 +449,15 @@ section #iconos-footer{
     grid-column: 2/3;
     display: grid;
     grid-template-rows: 21.77% 15.86% 5.38% 16.40% 40.59%;
+    grid-template-columns: repeat(5 20%)
 }
 
+#iconos-footer span {
+    grid-row: 1/2;
+}
 #iconos-footer #as-log{
     grid-row: 2/3;
+    grid-column: 1/6;
     object-fit: cover;
     width: 60%;
     height: 100%;
@@ -461,6 +466,7 @@ section #iconos-footer{
 
 #iconos-footer #gp-logo{
     grid-row: 4/5;
+    grid-column: 1/6;
     width: 60%;
     height: 100%;
 }
