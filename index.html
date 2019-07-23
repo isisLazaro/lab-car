@@ -19,7 +19,7 @@
     <nav id = "nav-bar" class="nav">
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <label for="nav-toggle" class = "nav-toggle-label">&#9776;</label>
-        <img src="/img/logo.png" alt="logo LabCar" class="logo">
+        <figure class="logo"><img src="/img/logo.png" alt="logo LabCar"></figure>
         <menu class="menu">
             <a href="#viaja">Viaja</a>
             <a href="#conduce">Conduce</a>
@@ -29,19 +29,21 @@
     <section id="hero" class="hero">
         <aside class="hero-mobile">
             <h2>Comienza a viajar con</h2>
-            <img src="/img/logo-blanco.png" alt="logo LabCar">
+            <figure><img src="/img/logo-blanco.png" alt="logo LabCar"></figure>
             <button>Descarga el app</button>
         </aside>
         <aside class="hero-desktop">
-            <article class = "article">
+            <hgroup class="hgroup"> 
                 <h2>Disfruta del viaje</h2>
                 <h2>Eres dueño de tu tiempo</h2>
-                <p>Viaja con</p> 
-                <img src="/img/logo-blanco.png" alt="logo LabCar">
-                <p>REGÍSTRATE</p>
-                <p>O BIEN</p>
-                <button>Conviértete en conductor</button>
-            </article>        
+            </hgroup>
+            <div class="div-dsktp">
+                <p>Viaja con</p>
+                <figure><img src="/img/logo-blanco.png" alt="logo LabCar"></figure> 
+            </div>
+            <button class="registro-user">REGÍSTRATE</button>
+            <p>O bien</p>
+            <button class="registro-conductor">Conviértete en conductor</button>       
         </aside>
     </section>
     <section id="informacion" class="info">
@@ -49,17 +51,20 @@
             <h3>La nueva app</h3>
             <img src="/img/celular.png" alt="">
         </aside>
-        <p id = "p-mobile"> Llega a tu destino aún más rápido </p>
+        <p class = "p-mobile"> Llega a tu destino aún más rápido </p>
         <aside class="info-desktop">
-            <h3>Descarga la nueva app</h3>
-            <p>La versión actualizada de LabCar está llena de nuevas funciones para 
-                llegar a donde quieras aún más fácil y rápido.</p>
-            <p>Con solo tocar un botón, un auto llega justo a tu ubicación. 
-                Súbete y no te preocupes: tu conductor sabe exactamente a dónde ir</p>
+            <img src="/img/celular.png" alt="">
+            <article>
+                <h2>Descarga la nueva app</h2>
+                <p>La versión actualizada de LabCar está llena de nuevas funciones para 
+                    llegar a donde quieras aún más fácil y rápido.</p>
+                <p>Con solo tocar un botón, un auto llega justo a tu ubicación. 
+                    Súbete y no te preocupes: tu conductor sabe exactamente a dónde ir</p>
+            </article>
         </aside>
     </section>
-    <section id = "conduce">
-        <aside id = "aside-conduce">
+    <section id = "conduce" class = "conduce-sec">
+        <aside id = "aside-conduce" class = "conduce-aside">
             <h3>Conduce cuando quieras</h3>
             <p>LabCar es una opción flexible para alcanzar tus metas financieras.</p>
             <button>Conviértete en conductor</button>
