@@ -70,17 +70,18 @@
             <button>Conviértete en conductor</button>
         </aside>
     </section>
-    <section id = "tarifas">
-        <h3>Tarifas</h3>
-        <p>Consulta las tarifas LabCar aquí</p>
-        <form action="">
-            <label for="partida" id = "labP">icono1</label>
-            <input type="text" id = "partida">
-            <label for="destino" id = "labD">icono2</label>
-            <input type="text" id = "destino">
-            <input type="submit" value="¡TRAZAR RUTA!" id = "trazar-ruta">
+    <section class = "tarifas">
+        <form action="" class="form-tarifa">
+            <h2>Tarifas</h2>
+            <p>Consulta las tarifas LabCar aquí</p>
+            <span for="partida" class = "labP"><img src="img/circulo.png" alt=""></span>
+            <input type="text" class = "partida" placeholder="Ingrese punto de partida">
+            <span for="destino" class = "labD"><img src="img/flecha.png" alt=""></span>
+            <input type="text" class = "destino" placeholder="Ingrese un destino"> 
+            <input type="submit" value="¡TRAZAR RUTA!" class = "trazar-ruta">
         </form>
-        <div id="map-container"></div>
+        <!-- <div class="map"> </div> -->
+        <div id="map-container" class = "map"></div>
     </section>
     <footer>
         <figure id="logo-footer"><img src="/img/logo-blanco.png" alt="" id = "img-logo-foot"></figure>
